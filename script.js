@@ -1,7 +1,7 @@
 const kmtot = +prompt ("Quanti chilometri avete intenzione di percorrere?");
 var price;
 
-if (typeof kmtot === 'number' && !Number.isNaN(kmtot)) {
+if (typeof kmtot === 'number' && !Number.isNaN(kmtot) && kmtot > 0) {
 
 console.log('✅ value is a number');
 document.getElementById('my_km').innerHTML = 
@@ -14,13 +14,13 @@ console.log("Prezzo attuale: €", price);
 
     console.log('⛔️ value is NOT a number');
     alert("Valore inserito non valido, la preghiamo di ricaricare la pagina e riprovare!");
-    throw new Error('⛔️ value is NOT a number');
+    location.reload(true);
 
 }
 
 const anni = +prompt ("Quanti anni ha il passeggero?");
 
-if (typeof anni === 'number' && !Number.isNaN(anni)) {
+if (typeof anni === 'number' && !Number.isNaN(anni) && anni > 0) {
 
     console.log('✅ value is a number');
 
@@ -59,6 +59,6 @@ if (typeof anni === 'number' && !Number.isNaN(anni)) {
     
         console.log('⛔️ value is NOT a number');
         alert("Valore inserito non valido, la preghiamo di ricaricare la pagina e riprovare!");
-        throw new Error('⛔️ value is NOT a number');
+        location.reload(true);
     
     }
