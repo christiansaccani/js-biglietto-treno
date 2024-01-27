@@ -1,7 +1,7 @@
 const kmtot = +prompt ("Quanti chilometri avete intenzione di percorrere?");
 var price;
 
-if (typeof kmtot === 'number' && !Number.isNaN(kmtot) && kmtot > 0) {
+if (typeof kmtot === 'number' && !Number.isNaN(kmtot) && kmtot > 0) {  //!Number.isNaN impedisce che Nan venga accettato come numero
 
 console.log('✅ value is a number');
 document.getElementById('my_km').innerHTML = 
@@ -18,14 +18,14 @@ console.log("Prezzo attuale: €", price);
 
 }
 
-const anni = +prompt ("Quanti anni ha il passeggero?");
+const anni = Math.trunc (+prompt ("Quanti anni ha il passeggero?")); //considerare solo il numero intero
 
 if (typeof anni === 'number' && !Number.isNaN(anni) && anni > 0) {
 
     console.log('✅ value is a number');
 
     if (anni < 18) {
-        console.log('Il passeggero è minorenne, si applica sconto!');
+        console.log('Il passeggero è minorenne, si applica sconto!', anni);
         price = (price * 80 / 100).toFixed(2);     //arrotondare il risultato ai decimali
         console.log("Prezzo finale: €", price);
 
