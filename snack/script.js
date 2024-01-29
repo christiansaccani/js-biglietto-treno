@@ -1,3 +1,5 @@
+// Celsius to Fahrenheit
+
 const option = prompt("celsius, media o cfs?");
 
 if (option === "celsius") {
@@ -19,6 +21,8 @@ if (option === "celsius") {
         location.reload(true);
     }
 }
+
+// Average
 
 else if (option === "media") {
 
@@ -46,10 +50,12 @@ else if (option === "media") {
     
 }    
 
+// Rock, Scisor, Paper
+
 else if (option === "cfs") {
 
     const user = prompt ("carta, forbice o sasso?")
-    console.log('La scelta del giocatore è: ', user);
+    console.log('✅ La scelta del giocatore è: ', user);
 
     function getRandomInt(min, max) {
         return Math.floor(Math.random() * (max - min + 1) + min);
