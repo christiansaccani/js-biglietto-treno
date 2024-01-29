@@ -46,3 +46,91 @@ else if (option === "media") {
     
 }    
 
+else if (option === "cfs") {
+
+    const user = prompt ("carta, forbice o sasso?")
+    console.log('La scelta del giocatore è: ', user);
+
+    function getRandomInt(min, max) {
+        return Math.floor(Math.random() * (max - min + 1) + min);
+    }
+
+    const computer = getRandomInt(1, 3);     // 1=carta, 2=forbice, 3=sasso;
+    console.log('Il numero scelto del computer è: ', computer);
+    
+    if (user == "carta") {
+
+        if (computer == 1) {
+
+            console.log('Pareggio!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: carta: Pareggio!`;
+
+        } else if (computer == 2) {
+
+            console.log('Sconfitta...');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: forbice: Sconfitta...`;
+
+        } else {
+
+            console.log('Vittoria!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: sasso: Vittoria!`;
+        }
+
+    }   else if (user == "forbice") {
+
+        if (computer == 1) {
+
+            console.log('Vittoria!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: carta: Vittoria!`;
+
+        } else if (computer == 2) {
+
+            console.log('Pareggio!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: forbice: Pareggio!`;
+
+        } else {
+
+            console.log('Sconfitta...');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: sasso: Sconfitta...`;
+        }
+
+    }   else if (user == "sasso") {
+
+        if (computer == 1) {
+
+            console.log('Sconfitta...');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: carta: Sconfitta...`;
+
+        } else if (computer == 2) {
+
+            console.log('Vittoria!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: forbice: Vittoria!`;
+
+        } else {
+
+            console.log('Pareggio!');
+            document.getElementById('thirdex').innerHTML = 
+            ` Giocatore: ${user}, Computer: sasso: Pareggio!`;
+        }
+
+    }   else {
+
+        console.log('⛔️ value is NOT correct');
+        alert("Valore inserito non valido, riprovare!");
+        location.reload(true);
+    }
+
+}   else {
+
+    console.log('⛔️ value is NOT correct');
+    alert("Valore inserito non valido, riprovare!");
+    location.reload(true);
+}
